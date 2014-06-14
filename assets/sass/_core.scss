@@ -2,6 +2,34 @@ h1 {
   font-size: 0.75em;
   text-transform: uppercase; 
 }
+/* maxvoltar.com/archive/-webkit-font-smoothing */
+html { -webkit-font-smoothing: antialiased; }
+
+a:hover, a:active { outline: none; }
+a, a:active, a:visited { color:red; text-decoration: none;}
+a:hover { color:red; }
+
+/* bicubic resizing for non-native sized IMG:
+code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+@mixin transform($radius) {
+  -webkit-transform:rotate($radius);
+      -ms-transform:rotate($radius);
+          transform:rotate($radius);
+}
+
+@mixin transition($effect) {
+  -webkit-transition:$effect;
+      -ms-transition:$effect;
+          transition:$effect;
+}
+.hidden-text {
+  position: absolute;
+  text-indent: -999em;
+}
+/*******************
+THEME
+**********************/
 
 h2 {
   color: #282828;
@@ -15,6 +43,7 @@ h2 {
 }
 
 article {
+  border-bottom: 26px solid $offwhite-colour;
   h3 {
     text-transform: uppercase;
     font-size: 0.75em;
@@ -37,6 +66,4 @@ article {
       }
     }
   }
-
-  margin-bottom: 40px;
 }
