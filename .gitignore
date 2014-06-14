@@ -1,3 +1,6 @@
-sass-cache/
-css/
+.sass-cache/
+assests/css/
 .DS_Store
+assets/css/
+*.DS_Store
+assests/css/styles.css

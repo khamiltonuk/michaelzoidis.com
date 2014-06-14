@@ -28,7 +28,7 @@ code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-imag
 THEME
 **********************/
 body {
-  font-family: 'aaarghnormal', verdana;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
 }
 .center-wrap{
@@ -151,7 +151,6 @@ body {
   margin: 0;
   @include transition(all 0.4s ease)
 }
-
 .bar:after {
   top: 21px; }
 
