@@ -12,4 +12,6 @@ include("settings/functions.php");
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
 </head>
 <body>
-    <h1>header</h1>
+	<header>
+    	<h1>Michael Zoidis</h1>
+	</header>

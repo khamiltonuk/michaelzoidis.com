@@ -463,7 +463,7 @@ SLIDESHOW
   text-indent: 100%;
   overflow: hidden; }
 
- /*.arrow {
+/*.arrow {
   background: black;
   width: 42px;
   height: 42px;
@@ -688,3 +688,6 @@ a.fa:hover {
 
 .fa-inverse {
   color: black; }
+
+h1 {
+  color: red; }
