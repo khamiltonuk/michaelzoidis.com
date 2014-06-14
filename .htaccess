@@ -1,0 +1,33 @@
+
+
+DirectoryIndex index.php?page=home
+
+# ------------------------------------------------------------------------------
+# | Custom error messages / pages                                              |
+# ------------------------------------------------------------------------------
+ErrorDocument 404.php index.php?page=home
+
+# ------------------------------------------------------------------------------
+# | Suppressing / Forcing the "www." at the beginning of URLs                  |
+# ------------------------------------------------------------------------------
+#<IfModule mod_rewrite.c>
+#    RewriteCond %{HTTPS} !=on
+#    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+#    RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+#</IfModule>
+
+# ------------------------------------------------------------------------------
+# | File access                                                                |
+# ------------------------------------------------------------------------------
+#<IfModule mod_autoindex.c>
+#    Options -Indexes
+#</IfModule>
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Block access to hidden files and directories.
+#<IfModule mod_rewrite.c>
+#    RewriteCond %{SCRIPT_FILENAME} -d [OR]
+#    RewriteCond %{SCRIPT_FILENAME} -f
+#    RewriteRule "(^|/)\." - [F]
+#</IfModule>

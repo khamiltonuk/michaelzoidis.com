@@ -1,0 +1,69 @@
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('#{$fa-font-path}/fontawesome-webfont.eot?v=#{$fa-version}');
+  src: url('#{$fa-font-path}/fontawesome-webfont.eot?#iefix&v=#{$fa-version}') format('embedded-opentype'),
+    url('#{$fa-font-path}/fontawesome-webfont.woff?v=#{$fa-version}') format('woff'),
+    url('#{$fa-font-path}/fontawesome-webfont.ttf?v=#{$fa-version}') format('truetype'),
+    url('#{$fa-font-path}/fontawesome-webfont.svg?v=#{$fa-version}#fontawesomeregular') format('svg');
+  //src: url('#{$fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'aaarghnormal';
+    src: url('#{$fa-font-path}/Aaargh-webfont.eot?v=#{$fa-version}');
+    src: url('#{$fa-font-path}/Aaargh-webfont.eot?#iefix&v=#{$fa-version}') format('embedded-opentype'),
+         url('#{$fa-font-path}/Aaargh-webfont.woff?v=#{$fa-version}') format('woff'),
+         url('#{$fa-font-path}/Aaargh-webfont.ttf?v=#{$fa-version}') format('truetype'),
+         url('#{$fa-font-path}/Aaargh-webfont.svg#aaarghnormal?v=#{$fa-version}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+// Base Class Definition
+// -------------------------
+
+.#{$fa-css-prefix} {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include transition( all 0.2s ease) 
+}
+a.#{$fa-css-prefix}:hover {
+	color: $fa-inverse;
+}
+// Icon Sizes
+// -------------------------
+
+/* makes the font 33% larger relative to the icon container */
+.#{$fa-css-prefix}-lg {
+  font-size: (4em / 3);
+  line-height: (3em / 4);
+  vertical-align: -15%;
+}
+.#{$fa-css-prefix}-2x { font-size: 2em; }
+.#{$fa-css-prefix}-3x { font-size: 3em; }
+.#{$fa-css-prefix}-4x { font-size: 4em; }
+.#{$fa-css-prefix}-5x { font-size: 5em; }
+
+$fa-var-github: "\f09b";
+$fa-var-linkedin: "\f0e1";
+$fa-var-instagram: "\f16d";
+$fa-var-exclamation-triangle: "\f071";
+
+.#{$fa-css-prefix}-warning:before,
+.#{$fa-css-prefix}-exclamation-triangle:before { content: $fa-var-exclamation-triangle; }
+.#{$fa-css-prefix}-github:before { content: $fa-var-github; }
+.#{$fa-css-prefix}-linkedin:before { content: $fa-var-linkedin; }
+.#{$fa-css-prefix}-instagram:before { content: $fa-var-instagram; }
+
+.#{$fa-css-prefix}-inverse { color: $fa-inverse; }
