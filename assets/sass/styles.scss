@@ -4,3 +4,30 @@
 @import "core";
 @import "mobile";
 @import "path";
+
+h1 { 
+	font-size: 0.75em;
+	text-transform: uppercase; 
+}
+
+h2 {
+	color: #282828;
+	font-size: 2.250em;
+	span {
+		color: $base-colour;
+	}
+}
+
+h3 {
+	text-transform: uppercase;
+	font-size: 0.75em;
+}
+
+article {
+	p {
+		font-size: 0.688em;
+	}
+	.cta {
+		font-size: 0.625em;
+	}
+}
