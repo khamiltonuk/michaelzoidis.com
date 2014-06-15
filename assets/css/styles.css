@@ -194,6 +194,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+h1 {
+  font-size: 0.75em;
+  text-transform: uppercase; }
+
 /* maxvoltar.com/archive/-webkit-font-smoothing */
 html {
   -webkit-font-smoothing: antialiased; }
@@ -220,352 +224,34 @@ code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-imag
 /*******************
 THEME
 **********************/
-body {
-  font-family: 'aaarghnormal', verdana;
+h2 {
+  color: #282828;
+  font-size: 2.250em;
+  background-color: #f8f5f5;
+  padding: 15px 24px;
   margin: 0; }
+  h2 span {
+    color: #6f79fe; }
 
-.center-wrap {
-  width: 850px;
-  margin: 0 auto; }
-  .center-wrap:after {
-    content: " ";
-    clear: both;
-    display: block; }
-
-#full-screen {
-  padding-top: 80px;
-  min-height: 100%;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: #efeade;
-  -webkit-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  transition: all 0.2s ease; }
-
-#overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: none;
-  top: 0;
-  left: 0; }
-
-#prev,
-#next {
-  width: 42px;
-  height: 42px;
-  position: absolute;
-  background: url(../images/master-sprite.png);
-  background-size: 231px 75px;
-  top: 50%;
-  margin-top: -21px; }
-
-#prev {
-  left: 0; }
-
-#next {
-  right: 0;
-  background-position: -45px 0; }
-
-.art-strip.no-script {
-  display: none; }
-
-.no-js #full-screen {
-  top: 120px;
-  padding-top: 0px; }
-.no-js .menu {
-  display: block; }
-.no-js #menu {
-  display: none; }
-.no-js .art-strip.no-script {
-  display: block; }
-
-#full-screen.show {
-  top: 120px; }
-
-#main-svg {
-  position: relative; }
-
-.menu {
-  min-height: 100%;
-  display: none; }
-  .menu .center-wrap {
-    text-align: center; }
-  .menu a {
-    width: 100px;
-    height: 20px;
-    padding: 40px 0;
-    display: inline-block;
-    background: red;
-    margin: 10px 5px;
-    text-align: center;
-    -webkit-transition: all 0.2s;
-    color: #efeade;
+article {
+  border-bottom: 26px solid #f8f5f5; }
+  article h3 {
     text-transform: uppercase;
-    text-decoration: none; }
-    .menu a:hover, .menu a:focus, .menu a:active {
-      background: #efeade;
-      color: black; }
-
-#menu {
-  padding: 10px;
-  position: absolute;
-  top: 0px;
-  left: 50%;
-  margin-left: -35px;
-  background: red;
-  width: 50px;
-  height: 50px; }
-  #menu .screen-reader {
-    position: absolute;
-    left: -999em; }
-
-.bar, .bar:after,
-.bar:before {
-  background: #efeade;
-  width: 50px;
-  /* border-radius: 5px; */
-  height: 5px;
-  margin: 23px 0;
-  display: block;
-  position: relative; }
-
-.bar:after,
-.bar:before {
-  content: " ";
-  position: absolute;
-  margin: 0;
-  -webkit-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
-
-.bar:after {
-  top: 21px; }
-
-.bar:before {
-  top: -21px; }
-
-/*#menu:hover .bar:before{
-  top: 10px ;
-}*/
-#menu.alternative .bar, #menu.alternative .bar:after,
-#menu.alternative .bar:before {
-  background-color: transparent; }
-
-#menu.alternative .bar:before {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: -0px;
-  background: #efeade;
-  display: block; }
-
-#menu.alternative .bar:after {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  top: 0px;
-  background: #efeade;
-  display: block; }
-
-/*---------------------------
-GO BACK TO TOP
-----------------------------*/
-#go-top {
-  position: fixed;
-  bottom: 9em;
-  right: -12em;
-  font-weight: bold;
-  text-decoration: none;
-  color: #efeade;
-  z-index: 10;
-  background-color: red;
-  font-size: 12px;
-  padding: 1em;
-  transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  /* Safari */ }
-  #go-top:hover {
-    background-color: rgba(0, 0, 0, 0.6); }
-  #go-top.animate {
-    right: 2em; }
-
-/*---------------------------
-SLIDESHOW
-----------------------------*/
-#imageSet {
-  margin: 0;
-  list-style: none;
-  padding: 0; }
-  #imageSet li {
-    float: left;
-    margin: 0; }
-
-#content {
-  height: 0px;
-  width: 100%;
-  position: relative;
-  background: #000;
-  margin: 0 auto;
-  overflow-y: hidden;
-  -webkit-transition: height 0.4s ease; }
-  #content.shown {
-    height: 350px; }
-  #content img {
-    position: absolute;
-    margin-left: -311px;
-    left: 50%; }
-
-@-webkit-keyframes buffer1 {
-  0% {
-    -webkit-transform: scale(0); }
-
-  50% {
-    -webkit-transform: scale(1); } }
-@-webkit-keyframes buffer2 {
-  0% {
-    -webkit-transform: scale(0); }
-
-  50% {
-    -webkit-transform: scale(0); }
-
-  100% {
-    -webkit-transform: scale(1); } }
-.buffer {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 50%;
-  left: 50%; }
-  .buffer > * {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    border-radius: 50%;
-    left: -50%;
-    top: -50%; }
-  .buffer > *:nth-child(1) {
-    background: red; }
-  .buffer > *:nth-child(2) {
-    -webkit-animation: buffer1 1s infinite; }
-  .buffer > *:nth-child(3) {
-    background: red;
-    -webkit-animation: buffer2 1s infinite; }
-
-.hide-text {
-  white-space: nowrap;
-  text-indent: 100%;
-  overflow: hidden; }
-
-/*.arrow {
-  background: black;
-  width: 42px;
-  height: 42px;
-  position: absolute;
-  top: 50%;
-  margin-top: -21px;
-  -webkit-transition: all 0.4s;
-  &#next span{
-    -webkit-transform-origin: 10px 17px;
-     @include transform(-135deg);
-  }
-  span{
-    width: 5px;
-    height: 25px;
-    display: block;
-    background: white;
-    @include transform(45deg);
-    margin: 2px 0 0 13px;
-    &:after{
-      content: " ";
-      position: absolute;
-      width: 5px;
-      @include transform(90deg);
-      height: 25px;
-      top: 10px;
-      left: 10px;
-      display: block;
-      background: white;
-    }
-  }
-  &:hover{
-    background: red;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-}/*
-#next {right: 0; }
-#prev { left:0;}*/
-#closee {
-  background: black;
-  width: 30px;
-  cursor: pointer;
-  z-index: 1;
-  height: 30px;
-  padding: 2px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: block; }
-  #closee span {
-    width: 5px;
-    height: 25px;
-    display: block;
-    margin: 2px 0 0 12px;
-    background: white;
-    -webkit-transition: all 0.4s;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg); }
-    #closee span:after {
-      content: " ";
-      width: 5px;
-      height: 25px;
-      display: block;
-      background: white;
-      -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-      transform: rotate(90deg); }
-    #closee span:hover {
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg); }
-
-.image {
-  position: relative;
-  width: 850px;
-  height: 455px; }
-  .image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; }
-  .image.active {
-    z-index: 3; }
-
-.web-strip {
-  background: url("../images/portfolio/hackday_min.jpg") center center;
-  padding: 60px 0;
-  height: 400px;
-  margin: 60px 0 -101px; }
-
-footer p {
-  margin: 0; }
-footer .center-wrap {
-  margin: 70px auto; }
-
-.button-primary {
-  border-radius: 5px;
-  background: #222; }
-
-.frame {
-  width: 850;
-  height: 455;
-  position: relative; }
+    font-size: 0.75em;
+    padding: 0 24px;
+    margin: 50px 0 25px; }
+  article p {
+    padding: 0 60px 0 24px;
+    font-size: 0.688em;
+    line-height: 1.636em; }
+    article p.cta {
+      margin: 25px 0 80px; }
+      article p.cta a {
+        font-size: 0.625rem;
+        font-weight: bold;
+        border: 2px solid #6f79fe;
+        padding: 6px 10px;
+        color: #6f79fe; }
 
 @media only screen and (max-width: 767px) {
   .menu a {
@@ -686,26 +372,3 @@ a.fa:hover {
 
 .fa-inverse {
   color: black; }
-
-h1 {
-  font-size: 0.75em;
-  text-transform: uppercase; }
-
-h2 {
-  color: #282828;
-  font-size: 2.250em; }
-  h2 span {
-    color: #6f79fe; }
-
-h3 {
-  text-transform: uppercase;
-  font-size: 0.75em; }
-
-article {
-  margin-bottom: 40px; }
-  article p {
-    font-size: 0.688em; }
-  article .cta {
-    font-size: 0.625rem;
-    border: 2px solid #6f79fe;
-    padding: 4px; }
