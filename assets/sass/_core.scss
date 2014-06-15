@@ -6,8 +6,8 @@ h1 {
 html { -webkit-font-smoothing: antialiased; }
 
 a:hover, a:active { outline: none; }
-a, a:active, a:visited { color:red; text-decoration: none;}
-a:hover { color:red; }
+a, a:active, a:visited { color:$base-colour; text-decoration: none;}
+a:hover { color:$base-colour; }
 
 /* bicubic resizing for non-native sized IMG:
 code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
@@ -30,6 +30,9 @@ code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-imag
 /*******************
 THEME
 **********************/
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 h2 {
   color: #282828;
@@ -61,8 +64,7 @@ article {
         font-weight: bold;
         border: 2px solid $base-colour;
         padding: 6px 10px;
-        color: $base-colour;
-        
+        color: $base-colour;        
       }
     }
   }

@@ -21,11 +21,12 @@ include("settings/functions.php");
 			<span></span>
 			<span></span>
 		</div>
-    	<h1>Michael Zoidis</h1>
+    	<h1 id="header">Michael Zoidis</h1>
     	<nav>
 	    	<ul id="menu" class="top-menu">
 	    		<li><a href="about">About</a></li>
-	    		<li><a href="about">Contact</a></li>
+	    		<li><a href="work">Work</a></li>
+	    		<li><a href="contact">Contact</a></li>
 	    	</ul>
 	    </nav>
     	<button class="spin-plus" title="menu"><span ></span></button>
