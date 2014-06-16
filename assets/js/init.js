@@ -12,6 +12,7 @@ $(function ($) {
 	    	$("header").addClass('shown-sub');
 	    },
 	    unmatch : function() {
+	    	$(".spin-plus").removeClass('animate');
 	    	$("header").removeClass('shown-sub');
 	    },
 	});
