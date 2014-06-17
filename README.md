@@ -10,8 +10,9 @@ Personal portfolio of Michael Zoidis
 * Sass has been attempted to be written using [smacss](http://smacss.com/)
 
 ##Todo
-* Set up grunt tasks and minify js with uglifyjs
+* Introduce grunt tasks and minify js with uglifyjs
 * Introduce requirejs
 * Introduce feature branches
+* Introduce responsive images with srcset
 
 ![Michaelzoidis](https://s3.amazonaws.com/assets.svpply.com/large/1873650.jpg?1388011367)
