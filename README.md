@@ -1,4 +1,4 @@
-michaelzoidis.com
+Michaelzoidis.com
 =================
 
-Personal portfolio of michael 
+Personal portfolio of Michael Zoidis
