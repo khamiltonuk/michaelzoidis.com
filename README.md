@@ -12,5 +12,6 @@ Personal portfolio of Michael Zoidis
 ##Todo
 * Set up grunt tasks and minify js with uglifyjs
 * Introduce requirejs
+* Introduce feature branches
 
 ![Michaelzoidis](https://s3.amazonaws.com/assets.svpply.com/large/1873650.jpg?1388011367)
