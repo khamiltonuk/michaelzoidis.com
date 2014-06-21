@@ -1,0 +1,31 @@
+{
+  "name": "michaelzoidis.com",
+  "version": "0.0.0",
+  "description": "michael zoidis personal portfolio",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/khamiltonuk/michaelzoidis.com.git"
+  },
+  "contributors": [
+    {
+        "name": "Kristian Hamilton",
+        "url": "https://github.com/khamiltonuk"
+    },
+    {
+        "name": "Barry Vuong",
+        "url": "https://github.com/bazzeh"
+    },
+    {
+        "name": "Sam Desborough",
+        "url": "https://github.com/desbo"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/khamiltonuk/michaelzoidis.com/issues"
+  },
+  "homepage": "https://github.com/khamiltonuk/michaelzoidis.com"
+}
