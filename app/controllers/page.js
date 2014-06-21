@@ -4,7 +4,7 @@
  * render the 'home' template, used for the '/' route.
  */
 module.exports.index = function (req, res) {
-  res.render('pages/home', { title: 'Home'});
+  res.render('pages/home', { name: 'Home'});
 };
 
 /**
@@ -14,10 +14,12 @@ module.exports.index = function (req, res) {
  *       it it's not found, show a 404 page
  */
 module.exports.render = function (req, res) {
-  res.render('pages/' + req.params.page, function (error, html) {
+  var page = req.params.page;
+
+  res.render('pages/' + page, { name: page }, function (error, html) {
     if (error) {
       res.status(404);
-      res.render('pages/404', { title: 'Page not found' });
+      res.render('pages/404', { name: 'Page not found' });
     } else {
       res.send(html);
     }
