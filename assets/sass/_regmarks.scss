@@ -78,13 +78,13 @@ h1 {
         -webkit-transition: all 0.8s ease;
         display: block;
         &:after {
-            -webkit-transition: all 0.4s ease;
-            height: 2px;
-            width: 10px;
-            content: " ";
-            display: block;
-         -webkit-transform: rotate(90deg);       
-        background: black;
+			-webkit-transition: all 0.4s ease;
+			height: 2px;
+			width: 10px;
+			content: " ";
+			display: block;
+			-webkit-transform: rotate(90deg);       
+			background: black;
         }
     }
 }

@@ -1,3 +1,9 @@
+*{ 
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
 h1 { 
   font-size: 0.75em;
   text-transform: uppercase; 
@@ -26,10 +32,23 @@ code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-imag
 .hidden {
   display: none;
 }
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 .hidden-text {
   position: absolute;
   text-indent: -999em;
 }
+.text-offset {
+  text-indent: 100%;
+  overflow:hidden;
+  white-space: nowrap;
+}
+
 /*******************
 THEME
 **********************/
@@ -73,14 +92,70 @@ article {
     }
   }
 }
+.about-text {
+  width: 100%;
+  padding:10px;
+  position: static;
+  padding: 10px;
+}
 .overlay {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   height: 100%;
-  background-color: rgba(254,224,111,0.9);
+  background: url(../images/overlay-transparent-background.png);
+  background: rgba(254,224,111,0.95) none;
 }
-.about-text {
-  width: 465px;
+.close {
+  background-color: transparent;
+  border: 0;
+  padding: 2px 0;
+  color: white;
+  margin: 10px 10px 30px;
+  border-bottom: 1px solid white;
+}
+.close:hover,
+.close:focus{
+  color: #000;
+  border-bottom: 1px solid black;
+}
+.mikes-head {
+  position: static;
+  // margin-top: -20px;
+  z-index: -1;
+  width: 80%;
+}
+
+@media only screen and (min-width: 767px) {
+  .close {
+    text-indent: 100%;
+    overflow:hidden;
+    white-space: nowrap;
+    background-color: transparent;
+    background-image: url(../svgs/Close.svg);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 40px;
+    z-index: 2;
+    right: 10%;
+    border: 0;
+    padding: 0;
+  }
+  .close:hover,
+  .close:focus{
+    border-bottom: 0;
+  }
+  .about-text {
+    position: absolute;
+    width: 40%;
+    height: 50%;
+  }
+  .mikes-head {
+    position: absolute;
+    left: 50%;
+    top: -25%;
+    width: auto;
+  }
 }
