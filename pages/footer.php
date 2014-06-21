@@ -1,6 +1,14 @@
 <footer>
 	<h1>footer</h1>
 </footer>
+<div class="overlay hidden">
+	<div class="about-text">
+		<h2 class="hidden-text">About me</h2> 
+		<p>Michael Zoidis is a multi-disciplined designer, unravelling a career in visual and user-experience design. I strive for better communication and engaging interaction through graphic design, video and sound. Always learning, exploring and drawing inspiration from a wide variety of areas, I strive to bring together experimental, playful and immersive experiences that absorb all the senses.</p>
+		<h2>Clients Include;</h2>
+		<p>Penguin, Erased Tapes, Kurt Geiger, Studio Moross, Signature Pictures, Victoria &amp; Albert Museum, VideoJug, Farm Group TV
+	</div>
+</div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>!window.jQuery && document.write('<script src="assets/js/jquery-1.10.2.js"><\/script>')</script>
 <script src="assets/js/enquire.js"></script>

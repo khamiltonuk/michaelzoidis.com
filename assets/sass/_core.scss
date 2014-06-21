@@ -23,6 +23,9 @@ code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-imag
       -ms-transition:$effect;
           transition:$effect;
 }
+.hidden {
+  display: none;
+}
 .hidden-text {
   position: absolute;
   text-indent: -999em;
@@ -33,16 +36,17 @@ THEME
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
-h2 {
-  color: #282828;
-  font-size: 2.250em;
-  background-color: $offwhite-colour;
-  span {
-    color: $base-colour;
+main{
+  h2 {
+    color: #282828;
+    font-size: 2.250em;
+    background-color: $offwhite-colour;
+    span {
+      color: $base-colour;
+    }
+    padding: 15px 24px;
+    margin: 0;
   }
-  padding: 15px 24px;
-  margin: 0;
 }
 
 article {
@@ -68,4 +72,15 @@ article {
       }
     }
   }
+}
+.overlay {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(254,224,111,0.9);
+}
+.about-text {
+  width: 465px;
 }

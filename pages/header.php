@@ -24,7 +24,7 @@ include("settings/functions.php");
     	<h1 id="header">Michael Zoidis</h1>
     	<nav>
 	    	<ul id="menu" class="top-menu">
-	    		<li><a href="about">About</a></li>
+	    		<li><a class="js-about">About</a></li>
 	    		<li><a href="work">Work</a></li>
 	    		<li><a href="contact">Contact</a></li>
 	    	</ul>
