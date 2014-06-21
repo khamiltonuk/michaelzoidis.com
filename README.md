@@ -9,6 +9,12 @@ Personal portfolio of Michael Zoidis
 * All js must past jshint
 * Sass has been attempted to be written using [smacss](http://smacss.com/)
 
+##Using grunt
+Run 'grunt serve' from the root folder to:
+* start a node.js server on http://localhost:3000
+* watch for changes to js files in app/ and restart the node server
+* watch for sass changes and recompile css
+
 ##Todo
 * Introduce grunt tasks and minify js with uglifyjs
 * Introduce requirejs
