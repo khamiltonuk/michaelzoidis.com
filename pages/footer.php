@@ -1,7 +1,7 @@
 <footer>
 	<h1>footer</h1>
 </footer>
-<div class="overlay">
+<div class="overlay hidden">
 	<button class="close">Close</button>
 	<div class="about-text">
 		<div class="relative-wrapper">
