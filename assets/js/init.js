@@ -4,13 +4,13 @@ $(function ($) {
 	$(".js-about").click(function(e){
 		e.preventDefault();
 		console.log("working")
-		$(".overlay").removeClass('hidden');
+		$(".overlay").removeClass('hidden').attr("aria-hidden", "false");;
 		
 	});
 
 	$(".close").click(function(e){
 		e.preventDefault();
-		$(".overlay").addClass('hidden');
+		$(".overlay").addClass('hidden').attr("aria-hidden", "true");;
 	})
 
     $(".spin-plus").click(function () {
