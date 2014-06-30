@@ -10,6 +10,7 @@ Personal portfolio of Michael Zoidis
 * Sass has been attempted to be written using [smacss](http://smacss.com/)
 
 ##Runing the development server
+0. Install [node.js](http://nodejs.org/)
 1. Run 'npm install' from the main directory
 2. Run 'npm install -g grunt-cli'
 3. Run 'grunt serve' from the root folder to:
