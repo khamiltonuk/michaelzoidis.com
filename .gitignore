@@ -4,3 +4,6 @@ assests/css/
 assets/css/
 *.DS_Store
 assests/css/styles.css
+node_modules
+npm-debug.log
+wireframes

@@ -1,0 +1,44 @@
+{
+  "name": "michaelzoidis.com",
+  "version": "0.0.0",
+  "description": "michael zoidis personal portfolio",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/khamiltonuk/michaelzoidis.com.git"
+  },
+  "contributors": [
+    {
+      "name": "Kristian Hamilton",
+      "url": "https://github.com/khamiltonuk"
+    },
+    {
+      "name": "Barry Vuong",
+      "url": "https://github.com/bazzeh"
+    },
+    {
+      "name": "Sam Desborough",
+      "url": "https://github.com/desbo"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/khamiltonuk/michaelzoidis.com/issues"
+  },
+  "homepage": "https://github.com/khamiltonuk/michaelzoidis.com",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-express-server": "^0.4.17",
+    "grunt-sass": "^0.14.0",
+    "morgan": "^1.1.1"
+  },
+  "dependencies": {
+    "express": "^4.4.4",
+    "serve-favicon": "^2.0.1",
+    "swig": "^1.3.2"
+  }
+}
