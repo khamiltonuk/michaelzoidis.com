@@ -64,10 +64,10 @@ h1 {
 }
 .spin-plus {
     display: block;
-    &.animate span{
+    &.animate span {
        -webkit-transform: rotate(180deg);   
     }
-    &.animate span:after{
+    &.animate span:after {
        -webkit-transform: rotate(180deg); 
     }
     span {
@@ -88,7 +88,6 @@ h1 {
         }
     }
 }
-
 @media only screen and (min-width: 767px) {
 	.shown-sub {
 		h1 {
@@ -102,9 +101,22 @@ h1 {
 	.spin-plus {
 		display: none;
 	}
-     .registation-marks{
-     	position: absolute;
-     	top: 60px;
+	.right-floating-nav,
+	.registation-marks {
+		position: absolute;
+		top: 60px;
+	}
+	.right-floating-nav {
+		right: 20px;
+		width: 34px;
+		img {
+			text-align: center;
+			margin-bottom: 69px;
+			display: inline-block;
+		}
+	}
+     .registation-marks {
+     	
      	left: 20px;
      	width: 12px;
      	span {
