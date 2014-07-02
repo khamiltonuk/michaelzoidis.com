@@ -88,6 +88,36 @@ h1 {
         }
     }
 }
+#scroll-arrow {
+	opacity: 0;
+}
+.no-svg .go-top-icon,
+.no-svg .soundcloud-icon,
+.no-svg .instagram_icon,
+.no-svg .twitter-icon {
+	display: inline-block;
+}
+.no-svg .go-top-icon {
+	background-image: url('../images/Scroll_button_icon.png');
+	width: 22px;
+	height: 22px;
+}
+.no-svg .soundcloud-icon {
+	background-image: url('../images/soundcloud_icon.png');
+	width: 35px;
+	height: 15px;
+}
+.no-svg .instagram_icon {
+	background-image: url('../images/Instagram_icon.png');
+	width: 21px;
+	height: 22px;
+}
+.no-svg .twitter-icon {
+	background-image: url('../images/twitter_icon.png');
+	width: 27px;
+	height: 22px;
+}
+
 @media only screen and (min-width: 767px) {
 	.shown-sub {
 		h1 {
@@ -103,20 +133,19 @@ h1 {
 	}
 	.right-floating-nav,
 	.registation-marks {
-		position: absolute;
 		top: 60px;
 	}
 	.right-floating-nav {
+		position: fixed;
 		right: 20px;
 		width: 34px;
 		text-align: center;
 		img {
-			margin-bottom: 69px;
 			display: inline-block;
 		}
 	}
      .registation-marks {
-     	
+     	position: absolute;
      	left: 20px;
      	width: 12px;
      	span {
