@@ -4,7 +4,7 @@
  * Top Navigation
  */
  header {
-	max-width: 970px;
+	max-width: 650px;
 	margin: 0 auto;
 	position: relative;
 	padding: 30px 10px;
@@ -54,7 +54,7 @@ h1 {
 }
 .shown-sub {
 	.top-menu {
-		right: 20%;
+		right: 0;
 	}
 	h1 {
 		opacity: 0;
@@ -91,6 +91,9 @@ h1 {
 #scroll-arrow {
 	opacity: 0;
 }
+.right-floating-nav {
+ 	position: absolute;
+}
 .no-svg .go-top-icon,
 .no-svg .soundcloud-icon,
 .no-svg .instagram_icon,
@@ -118,36 +121,43 @@ h1 {
 	height: 22px;
 }
 
+@media only screen and (min-width: 320px) {
+	.shown-sub {
+	}
+}
 @media only screen and (min-width: 767px) {
 	.shown-sub {
+		.top-menu {
+		}
 		h1 {
 			opacity: 1;
 		}
 	}
+	#header {
+		max-width: 970px;
+	}
 	header {
+		
 		padding-right: 0;
 		padding-left: 0;
 	}
 	.spin-plus {
 		display: none;
 	}
-	.right-floating-nav,
-	.registation-marks {
-		top: 60px;
-	}
 	.right-floating-nav {
-		position: fixed;
-		right: 20px;
+		top: 150px;
+		right: -15px;
 		width: 34px;
 		text-align: center;
 		img {
 			display: inline-block;
 		}
 	}
-     .registation-marks {
-     	position: absolute;
-     	left: 20px;
+    .registation-marks {
+    	position: absolute
+     	left: -5px;
      	width: 12px;
+     	top: 140px;
      	span {
      		width: 100%;
      		display: block;
@@ -169,4 +179,11 @@ h1 {
 			}
      	}
     }
+}
+@media only screen and (min-width: 1440px) {
+	.shown-sub {
+		.top-menu {
+			right: 20%;
+		}
+	}
 }

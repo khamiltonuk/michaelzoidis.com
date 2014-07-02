@@ -1,8 +1,6 @@
 $(function ($) {
 	if(document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1")){
-		(function(H){H.className=H.className.replace(/\bno-svg\b/,'svg')})(document.documentElement)
-	}else{
-		
+		(function(H){H.className=H.className.replace(/\bno-svg\b/,'svg')})(document.documentElement);
 	}
 
 	var windowHeight = $(window).height();

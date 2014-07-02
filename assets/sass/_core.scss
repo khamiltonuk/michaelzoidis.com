@@ -54,37 +54,44 @@ THEME
 **********************/
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
 }
 main{
+  background-color: $offwhite-colour;
   h2 {
     color: #282828;
     font-size: 2.250em;
-    background-color: $offwhite-colour;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
     span {
       color: $base-colour;
     }
-    padding: 15px 24px;
-    margin: 0;
   }
 }
 
 article {
-  border-bottom: 26px solid $offwhite-colour;
+  margin-bottom: 60px;
+  background: #fff;
+  padding-bottom: 60px;
+  img {
+    width: 100%; 
+  }
   h3 {
     text-transform: uppercase;
     font-size: 0.75em;
-    padding: 0 24px;
+    padding: 0 7.068%;
     margin: 50px 0 25px;
   }
   p {
-    padding: 0 60px 0 24px;
+    padding: 0 7.068%;
     font-size: 0.688em;
     line-height: 1.636em;
     &.cta {
-      margin: 25px 0 80px;
       a {
         font-size: 0.625rem;
         font-weight: bold;
+        display: inline-block;
         border: 2px solid $base-colour;
         padding: 6px 10px;
         color: $base-colour;        
@@ -126,6 +133,23 @@ article {
   // margin-top: -20px;
   z-index: -1;
   width: 80%;
+}
+@media only screen and (min-width: 320px) {
+  main{
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:7.068%;
+    h2 {
+      margin-bottom: 53px;
+    }
+  }
+  article {
+      
+      img{
+        
+      }
+  }
 }
 
 @media only screen and (min-width: 767px) {
