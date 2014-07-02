@@ -4,7 +4,7 @@
  * Top Navigation
  */
  header {
-	max-width: 970px;
+	max-width: 650px;
 	margin: 0 auto;
 	position: relative;
 	padding: 30px 10px;
@@ -54,7 +54,7 @@ h1 {
 }
 .shown-sub {
 	.top-menu {
-		right: 20%;
+		right: 0;
 	}
 	h1 {
 		opacity: 0;
@@ -64,10 +64,10 @@ h1 {
 }
 .spin-plus {
     display: block;
-    &.animate span{
+    &.animate span {
        -webkit-transform: rotate(180deg);   
     }
-    &.animate span:after{
+    &.animate span:after {
        -webkit-transform: rotate(180deg); 
     }
     span {
@@ -78,35 +78,86 @@ h1 {
         -webkit-transition: all 0.8s ease;
         display: block;
         &:after {
-            -webkit-transition: all 0.4s ease;
-            height: 2px;
-            width: 10px;
-            content: " ";
-            display: block;
-         -webkit-transform: rotate(90deg);       
-        background: black;
+			-webkit-transition: all 0.4s ease;
+			height: 2px;
+			width: 10px;
+			content: " ";
+			display: block;
+			-webkit-transform: rotate(90deg);       
+			background: black;
         }
     }
 }
+#scroll-arrow {
+	opacity: 0;
+}
+.right-floating-nav {
+ 	position: absolute;
+}
+.no-svg .go-top-icon,
+.no-svg .soundcloud-icon,
+.no-svg .instagram_icon,
+.no-svg .twitter-icon {
+	display: inline-block;
+}
+.no-svg .go-top-icon {
+	background-image: url('../images/Scroll_button_icon.png');
+	width: 22px;
+	height: 22px;
+}
+.no-svg .soundcloud-icon {
+	background-image: url('../images/soundcloud_icon.png');
+	width: 35px;
+	height: 15px;
+}
+.no-svg .instagram_icon {
+	background-image: url('../images/Instagram_icon.png');
+	width: 21px;
+	height: 22px;
+}
+.no-svg .twitter-icon {
+	background-image: url('../images/twitter_icon.png');
+	width: 27px;
+	height: 22px;
+}
 
+@media only screen and (min-width: 320px) {
+	.shown-sub {
+	}
+}
 @media only screen and (min-width: 767px) {
 	.shown-sub {
+		.top-menu {
+		}
 		h1 {
 			opacity: 1;
 		}
 	}
+	#header {
+		max-width: 970px;
+	}
 	header {
+		
 		padding-right: 0;
 		padding-left: 0;
 	}
 	.spin-plus {
 		display: none;
 	}
-     .registation-marks{
-     	position: absolute;
-     	top: 60px;
-     	left: 20px;
+	.right-floating-nav {
+		top: 150px;
+		right: -15px;
+		width: 34px;
+		text-align: center;
+		img {
+			display: inline-block;
+		}
+	}
+    .registation-marks {
+    	position: absolute
+     	left: -5px;
      	width: 12px;
+     	top: 140px;
      	span {
      		width: 100%;
      		display: block;
@@ -128,4 +179,11 @@ h1 {
 			}
      	}
     }
+}
+@media only screen and (min-width: 1440px) {
+	.shown-sub {
+		.top-menu {
+			right: 20%;
+		}
+	}
 }

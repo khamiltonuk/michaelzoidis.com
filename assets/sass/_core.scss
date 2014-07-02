@@ -1,3 +1,9 @@
+*{ 
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
 h1 { 
   font-size: 0.75em;
   text-transform: uppercase; 
@@ -23,49 +29,159 @@ code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-imag
       -ms-transition:$effect;
           transition:$effect;
 }
+.hidden {
+  display: none;
+}
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 .hidden-text {
   position: absolute;
   text-indent: -999em;
 }
+.text-offset {
+  text-indent: 100%;
+  overflow:hidden;
+  white-space: nowrap;
+}
+
 /*******************
 THEME
 **********************/
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
 }
-
-h2 {
-  color: #282828;
-  font-size: 2.250em;
+main{
   background-color: $offwhite-colour;
-  span {
-    color: $base-colour;
+  h2 {
+    color: #282828;
+    font-size: 2.250em;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    span {
+      color: $base-colour;
+    }
   }
-  padding: 15px 24px;
-  margin: 0;
 }
 
 article {
-  border-bottom: 26px solid $offwhite-colour;
+  margin-bottom: 60px;
+  background: #fff;
+  padding-bottom: 60px;
+  img {
+    width: 100%; 
+  }
   h3 {
     text-transform: uppercase;
     font-size: 0.75em;
-    padding: 0 24px;
+    padding: 0 7.068%;
     margin: 50px 0 25px;
   }
   p {
-    padding: 0 60px 0 24px;
+    padding: 0 7.068%;
     font-size: 0.688em;
     line-height: 1.636em;
     &.cta {
-      margin: 25px 0 80px;
       a {
         font-size: 0.625rem;
         font-weight: bold;
+        display: inline-block;
         border: 2px solid $base-colour;
         padding: 6px 10px;
         color: $base-colour;        
       }
     }
+  }
+}
+.about-text {
+  width: 100%;
+  padding:10px;
+  position: static;
+  padding: 10px;
+}
+.overlay {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: url(../images/overlay-transparent-background.png);
+  background: rgba(254,224,111,0.95) none;
+}
+.close {
+  outline: 0;
+  background-color: transparent;
+  border: 0;
+  padding: 2px 0;
+  color: white;
+  margin: 10px 10px 30px;
+  border-bottom: 1px solid white;
+}
+.close:hover,
+.close:focus{
+  color: #000;
+  border-bottom: 1px solid black;
+}
+.mikes-head {
+  position: static;
+  // margin-top: -20px;
+  z-index: -1;
+  width: 80%;
+}
+@media only screen and (min-width: 320px) {
+  main{
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:7.068%;
+    h2 {
+      margin-bottom: 53px;
+    }
+  }
+  article {
+      
+      img{
+        
+      }
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .close {
+    text-indent: 100%;
+    overflow:hidden;
+    white-space: nowrap;
+    background-color: transparent;
+    background-image: url(../images/Close.png);
+    background-image: url(../svgs/Close.svg), none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 40px;
+    z-index: 2;
+    right: 10%;
+    border: 0;
+    padding: 0;
+  }
+  .close:hover,
+  .close:focus{
+    border-bottom: 0;
+  }
+  .about-text {
+    position: absolute;
+    width: 40%;
+    height: 50%;
+  }
+  .mikes-head {
+    position: absolute;
+    left: 50%;
+    top: -25%;
+    width: auto;
   }
 }
