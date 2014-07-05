@@ -50,7 +50,9 @@ h1 {
 	opacity: 1;
 	-webkit-transition: opacity 4s ease;
 	transition: opacity 4s ease;
-
+	a {
+		color: #000;
+	}
 }
 .shown-sub {
 	.top-menu {
@@ -64,13 +66,13 @@ h1 {
 }
 .spin-plus {
     display: block;
-    &.animate span {
+    &.animate .cross {
        -webkit-transform: rotate(180deg);   
     }
-    &.animate span:after {
+    &.animate .cross:after {
        -webkit-transform: rotate(180deg); 
     }
-    span {
+    .cross {
         height: 2px;
         width: 10px;
         margin: 0;
@@ -93,6 +95,9 @@ h1 {
 }
 .right-floating-nav {
  	position: absolute;
+}
+.hot {
+	display: none;
 }
 .no-svg .go-top-icon,
 .no-svg .soundcloud-icon,
@@ -154,7 +159,7 @@ h1 {
 		}
 	}
     .registation-marks {
-    	position: absolute;
+    	webkit-transition: all 0.2s ease ;
      	left: -5px;
      	width: 12px;
      	top: 140px;

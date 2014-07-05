@@ -19,9 +19,9 @@ a:hover { color:$base-colour; }
 code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
 .ie7 img { -ms-interpolation-mode: bicubic; }
 @mixin transform($radius) {
-  -webkit-transform:rotate($radius);
-      -ms-transform:rotate($radius);
-          transform:rotate($radius);
+  -webkit-transform:($radius);
+      -ms-transform:($radius);
+          transform:($radius);
 }
 
 @mixin transition($effect) {
@@ -36,8 +36,6 @@ code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-imag
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 .hidden-text {
   position: absolute;
@@ -48,7 +46,12 @@ code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-imag
   overflow:hidden;
   white-space: nowrap;
 }
-
+.sticky {
+  position: fixed !important;
+}
+.absolute{
+  position: absolute
+}
 /*******************
 THEME
 **********************/
@@ -183,5 +186,13 @@ article {
     left: 50%;
     top: -25%;
     width: auto;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  main{
+    max-width: 1000px;
+  }
+  article {
+    
   }
 }
