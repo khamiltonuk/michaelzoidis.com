@@ -141,6 +141,11 @@ article {
   width: 80%;
 }
 @media only screen and (min-width: 320px) {
+  .center-wrap {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   main{
     max-width: 650px;
     margin-left: auto;
@@ -193,6 +198,9 @@ article {
 }
 @media only screen and (min-width: 1000px) {
   main{
+    max-width: 1000px;
+  }
+  .center-wrap {
     max-width: 1000px;
   }
   article {
