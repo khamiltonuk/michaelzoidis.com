@@ -20,7 +20,7 @@ module.exports = function (grunt) {
       },
       dev: {
         options: {
-          sourceMap: true
+          sourcemap: true
         },
         files: {
           'assets/css/styles.css': 'assets/sass/styles.scss'
@@ -49,7 +49,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-express-server');
-  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
   grunt.registerTask('serve', ['express:dev', 'sass:dev', 'watch']);
 };
