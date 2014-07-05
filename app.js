@@ -36,6 +36,11 @@ app.use(express.static(__dirname + '/assets'));
 app.use(favicon(__dirname + '/assets/favicon.ico'));
 
 /**
+ * Year for footer
+ */
+app.locals.date = Date.now();
+
+/**
  * set up routes
  */
 app.use('/', require(__dirname + '/app/routes/main').router);
@@ -44,6 +49,8 @@ app.use('/', require(__dirname + '/app/routes/main').router);
  * enable request logging
  */
 app.use(morgan('dev'));
+
+
 
 /**
  * start server
