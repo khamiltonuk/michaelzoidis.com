@@ -20,19 +20,22 @@ code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-imag
 .ie7 img { -ms-interpolation-mode: bicubic; }
 @mixin transform($radius) {
   -webkit-transform:($radius);
-      -ms-transform:($radius);
-          transform:($radius);
+  -ms-transform:($radius);
+  -moz-transform:($radius);
+  transform:($radius);
 }
 
 @mixin transition($effect) {
   -webkit-transition:$effect;
-      -ms-transition:$effect;
-          transition:$effect;
+  -ms-transition:$effect;
+  -moz-transition:$effect;
+  transition:$effect;
 }
 .hidden {
   display: none;
 }
 .center {
+  @include transform(translate(-50%, -50%));
   position: absolute;
   left: 50%;
   top: 50%;
@@ -193,6 +196,6 @@ article {
     max-width: 1000px;
   }
   article {
-    
+
   }
 }
