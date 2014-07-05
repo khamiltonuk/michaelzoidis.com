@@ -16,7 +16,6 @@ module.exports.render = function (req, res) {
   var file = path + req.params.project + extension;
 
   fs.readFile(file, { encoding: 'utf8' }, function (error, data) {
-    console.log(data);
     if (error) {
       res.status(404);
       res.render('pages/404', { name: 'Page not found' });
