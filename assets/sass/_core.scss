@@ -1,4 +1,6 @@
-*{ 
+*,
+*:before,
+*:after{ 
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;         /* Opera/IE 8+ */
@@ -24,36 +26,71 @@ code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-imag
   -moz-transform:($radius);
   transform:($radius);
 }
-.effect {
-  a {
-    -webkit-perspective: 1000px;
-    -moz-perspective: 1000px;
-    perspective: 1000px;
-    &:hover span{
-      -webkit-transform: rotateX(90deg) translateY(-22px);
-      -moz-transform: rotateX(90deg) translateY(-22px);
-      transform: rotateX(90deg) translateY(-22px);
-    }
-    span:before {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #0965a0;
-      content: attr(data-hover);
-      -webkit-transition: background 0.3s;
-      -moz-transition: background 0.3s;
-      transition: background 0.3s;
-      -webkit-transform: rotateX(-90deg);
-      -moz-transform: rotateX(-90deg);
-      transform: rotateX(-90deg);
-      -webkit-transform-origin: 50% 0;
-      -moz-transform-origin: 50% 0;
-      transform-origin: 50% 0;
-    }
-  }
+.cta a span,
+.cta a span:before{
+  font-size: 0.625rem;
+  font-weight: bold;
+  display: inline-block;
+  border: 2px solid $base-colour;
+  padding: 6px 10px;
+  text-align: center;
+  color: $base-colour;        
 }
+/* Effect 2: 3D rolling links, idea from http://hakim.se/thoughts/rolling-links */
+.cl-effect-2 a {
+  line-height: 44px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.cl-effect-2 a span {
+  position: relative;
+  display: inline-block;
+  padding: 0 14px;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.cl-effect-2 a span::before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  content: attr(data-hover);
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  transition: background 0.3s;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+}
+
+.cl-effect-2 a:hover span,
+.cl-effect-2 a:focus span {
+  -webkit-transform: rotateX(90deg) translateY(-22px);
+  -moz-transform: rotateX(90deg) translateY(-22px);
+  transform: rotateX(90deg) translateY(-22px);
+}
+
+.cl-effect-2 a:hover span::before,
+.cl-effect-2 a:focus span::before {
+  background: $base-colour;
+  color: #fff;   
+}
+
 @mixin transition($effect) {
   -webkit-transition:$effect;
   -ms-transition:$effect;
@@ -144,16 +181,6 @@ article {
     padding: 0 7.068%;
     font-size: 0.8em;
     line-height: 1.636em;
-    &.cta {
-      a {
-        font-size: 0.625rem;
-        font-weight: bold;
-        display: inline-block;
-        border: 2px solid $base-colour;
-        padding: 6px 10px;
-        color: $base-colour;        
-      }
-    }
   }
 }
 .about-text {
@@ -247,7 +274,7 @@ article {
     width: auto;
   }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1400px) {
   main{
     max-width: 1000px;
     padding-right: 60px;

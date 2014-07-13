@@ -8,6 +8,7 @@
 	margin: 0 auto;
 	position: relative;
 	padding: 30px 10px;
+	overflow: hidden;
 	.spin-plus {
 		top: 50%;
 		margin-top: -15px;
@@ -27,7 +28,6 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	min-width: 300px;
 	li {
 		float: left;
 		a {
@@ -40,9 +40,7 @@
 				color: $base-colour;
 			}
 		}
-		&:last-child a{
-			padding-right: 0;
-		}
+		
 	}
 }
 h1 {
@@ -56,7 +54,7 @@ h1 {
 }
 .shown-sub {
 	.top-menu {
-		right: 0;
+		right: 30px;
 	}
 	h1 {
 		opacity: 0;
@@ -135,7 +133,14 @@ h1 {
 		h1 {
 			opacity: 1;
 		}
+		.top-menu{
+			right: 0;
+			li:last-child a{
+				padding-right: 0;
+			}
+		}
 	}
+	
 	#header {
 		max-width: 970px;
 	}
