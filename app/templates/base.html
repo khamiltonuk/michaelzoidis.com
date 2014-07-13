@@ -2,9 +2,30 @@
 {% include 'layout/header.html' %}
 
 <body>
-  <main>
-    {% block content %} {% endblock %}
-  </main>
+	<main class="cf">
+		<div class="registation-marks absolute" role="presentation">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="right-floating-nav absolute">
+			<a href="https://twitter.com/mikezoidis" target="_blank" title="Twitter" >
+				<img src="/svgs/twitter.svg" class="twitter-icon" alt="" />
+			</a>
+			<a href="http://instagram.com/mikezoidis" target="_blank" title="Instagram" >
+				<img src="/svgs/instagram.svg" class="instagram_icon" alt="" />
+			</a>
+			<a href="https://soundcloud.com/mjz" target="_blank" title="Soundcloud" >
+				<img src="/svgs/soundcloud.svg" class="svg-icon soundcloud-icon" alt="" />
+			</a>
+			<a href="#" target="_blank" title="Back to top" id="go-top">
+				<img src="/svgs/scroll_up.svg" class="svg-icon go-top-icon" alt="" />
+			</a>
+		</div>
+		{% block content %} {% endblock %}
+	</main>
 </body>
 
 {% include 'layout/footer.html' %}

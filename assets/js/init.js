@@ -7,7 +7,7 @@ $(function ($) {
 	var baseSpace = windowHeight / 10;
 	disfromtop = $(window).scrollTop();
 	var spaceOutLinks = function(){
-		$('.right-floating-nav object').each(function(){
+		$('.right-floating-nav img').each(function(){
 			if (disfromtop < windowHeight ){
 				$(this).css({
 				 marginBottom: (baseSpace + (disfromtop/20)) + 'px'
@@ -28,9 +28,9 @@ $(function ($) {
 	var stickyElement = function(){
 		$('.absolute').each(function(){
 			var elmOffset = $(this).offset();
-			//console.log(disfromtop)
+			//var startingHeight = elmOffset.top;
 				$(this).css({
-					top: (disfromtop + 150) + 'px'
+					top: (disfromtop + 60) + 'px'
 				});
 		});
 	}
@@ -60,7 +60,7 @@ $(function ($) {
 		e.preventDefault();
 		console.log("working")
 		$(".overlay").removeClass('hidden').attr("aria-hidden", "false");
-		
+		$(".overlay").find(".about-text").removeClass("hidden");
 	});
 
 	var closeOverlay = function(){

@@ -23,8 +23,7 @@
 	position: absolute;
 	top: 0;
 	right: 100%;
-	-webkit-transition: all 2s ease;
-	transition: all 2s ease;
+	@include transition(all 2s ease);
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -48,9 +47,10 @@
 }
 h1 {
 	opacity: 1;
-	-webkit-transition: opacity 4s ease;
-	transition: opacity 4s ease;
-	a {
+	@include transition(all 4s ease);
+	a,
+	a:visited,
+	a:active {
 		color: #000;
 	}
 }
@@ -60,32 +60,31 @@ h1 {
 	}
 	h1 {
 		opacity: 0;
-		-webkit-transition: opacity 0.2s ease;
-		transition: opacity 0.2s ease;
+		@include transition(all 0.2s ease);
 	}
 }
 .spin-plus {
     display: block;
     &.animate .cross {
-       -webkit-transform: rotate(180deg);   
+       @include transform(rotate(180deg));   
     }
     &.animate .cross:after {
-       -webkit-transform: rotate(180deg); 
+       @include transform(rotate(180deg)); 
     }
     .cross {
         height: 2px;
         width: 10px;
         margin: 0;
         background: black;
-        -webkit-transition: all 0.8s ease;
+        @include transition(all 0.8s ease);
         display: block;
         &:after {
-			-webkit-transition: all 0.4s ease;
+        	@include transition(all 0.4s ease);
 			height: 2px;
 			width: 10px;
 			content: " ";
 			display: block;
-			-webkit-transform: rotate(90deg);       
+	        @include transform(rotate(90deg));       
 			background: black;
         }
     }
@@ -95,6 +94,7 @@ h1 {
 }
 .right-floating-nav {
  	position: absolute;
+ 	display: none;
 }
 .hot {
 	display: none;
@@ -132,8 +132,6 @@ h1 {
 }
 @media only screen and (min-width: 767px) {
 	.shown-sub {
-		.top-menu {
-		}
 		h1 {
 			opacity: 1;
 		}
@@ -142,7 +140,6 @@ h1 {
 		max-width: 970px;
 	}
 	header {
-		
 		padding-right: 0;
 		padding-left: 0;
 	}
@@ -150,7 +147,8 @@ h1 {
 		display: none;
 	}
 	.right-floating-nav {
-		top: 150px;
+		top: 60px;
+		display: block;
 		right: -15px;
 		width: 34px;
 		text-align: center;
@@ -159,14 +157,18 @@ h1 {
 		}
 	}
     .registation-marks {
-    	-webkit-transition: all 0.2s ease ;
+    	@include transition(all 0.2s ease);
      	left: -5px;
      	width: 12px;
-     	top: 140px;
+     	top: 60px;
+     	&:hover span {
+     		height: 12px;
+     	}
      	span {
      		width: 100%;
      		display: block;
-     		height: 12px;
+     		height: 5px;
+			@include transition(height 0.2s ease);
      		&:nth-child(1) {
 				background: #ffe87e;
 			}
@@ -183,6 +185,9 @@ h1 {
 				background: #2e0180;
 			}
      	}
+     	span:hover {
+     		height: 24px;
+     	}
     }
 }
 @media only screen and (min-width: 1440px) {
@@ -190,5 +195,13 @@ h1 {
 		.top-menu {
 			right: 20%;
 		}
+	}
+	main {
+		max-width: 1320px;
+
+	}
+	article {
+		max-width: 570px;
+		float: left;
 	}
 }
