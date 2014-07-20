@@ -38,7 +38,7 @@ $(function ($) {
 
 	$(window).scroll(function() {
 		disfromtop = $(this).scrollTop();
-		disfromtop > 250 ? $('#go-top').addClass('animate') : $('#go-top').removeClass('animate') ;
+		disfromtop > 250 ? $('#go-top').addClass('is-shown') : $('#go-top').removeClass('is-shown') ;
 		stickyElement();
 		// space out links
 		spaceOutLinks();

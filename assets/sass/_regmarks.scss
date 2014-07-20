@@ -45,6 +45,7 @@
 }
 h1 {
 	opacity: 1;
+	letter-spacing: 2px;
 	@include transition(all 4s ease);
 	a,
 	a:visited,
@@ -94,8 +95,12 @@ h1 {
  	position: absolute;
  	display: none;
 }
-.hot {
-	display: none;
+#go-top {
+	opacity: 0;
+	@include transition(opacity 0.2s ease)
+}
+#go-top.is-shown {
+	opacity: 1;
 }
 .no-svg .go-top-icon,
 .no-svg .soundcloud-icon,
