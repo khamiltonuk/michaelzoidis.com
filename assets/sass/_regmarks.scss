@@ -131,6 +131,9 @@ h1 {
 
 @media only screen and (min-width: 320px) {
 	.shown-sub {
+		h1{
+			padding-left: 60px;
+		}
 	}
 }
 @media only screen and (min-width: 767px) {
@@ -139,7 +142,7 @@ h1 {
 			opacity: 1;
 		}
 		.top-menu{
-			right: 0;
+			right: 60px;
 			li:last-child a{
 				padding-right: 0;
 			}
@@ -200,18 +203,9 @@ h1 {
      	}
     }
 }
-@media only screen and (min-width: 1440px) {
-	.shown-sub {
-		.top-menu {
-			right: 20%;
-		}
-	}
-	main {
-		max-width: 1320px;
 
-	}
-	article {
-		max-width: 570px;
-		float: left;
-	}
+@media only screen and (min-width: 1440px) {
+  header {
+    max-width: 1200px;
+  }
 }
