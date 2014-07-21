@@ -180,6 +180,7 @@ article {
   p {
     padding: 0 7.068%;
     font-size: 0.8em;
+    width: 447px;
     line-height: 1.636em;
   }
 }
@@ -280,13 +281,12 @@ article {
     padding-right: 60px;
     padding-left: 60px;
     h2 {
-      width: 570px;
       margin: 0;
       margin-bottom: 60px;
       margin-right: 60px;
-      margin-left: 0;
+      margin-left: 60px;
       float: left;
-      max-width: 570px;
+      max-width: 724px;
     }
   }
   .center-wrap {
