@@ -3,6 +3,9 @@ $(function ($) {
 		(function(H){H.className=H.className.replace(/\bno-svg\b/,'svg')})(document.documentElement);
 	}
 
+	// Picture element HTML5 shiv
+	document.createElement( "picture" );
+
 	var windowHeight = $(window).height();
 	var baseSpace = windowHeight / 10;
 	disfromtop = $(window).scrollTop();
