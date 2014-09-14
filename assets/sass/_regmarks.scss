@@ -30,6 +30,9 @@
 	padding: 0;
 	li {
 		float: left;
+    &:hover {
+      cursor: pointer;
+    }
 		a {
 			padding: 38px 31px;
 			font-size: 0.75em;
@@ -37,12 +40,12 @@
 			color: #000;
 			&:hover,
 			&:focus {
-				color: $base-colour;
+				color: black;
 			}
 		}
-		
 	}
 }
+
 h1 {
 	opacity: 1;
 	letter-spacing: 2px;
