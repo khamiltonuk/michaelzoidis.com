@@ -1,0 +1,13 @@
+@mixin transition($effect) {
+  -webkit-transition:$effect;
+  -ms-transition:$effect;
+  -moz-transition:$effect;
+  transition:$effect;
+}
+
+@mixin transform($radius) {
+  -webkit-transform:($radius);
+  -ms-transform:($radius);
+  -moz-transform:($radius);
+  transform:($radius);
+}

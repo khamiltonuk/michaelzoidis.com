@@ -3,22 +3,13 @@
 /* -------------------------------------------- *
  * Top Navigation
  */
- header {
+header,
+footer {
 	max-width: 650px;
 	margin: 0 auto;
 	position: relative;
 	padding: 30px 10px;
 	overflow: hidden;
-	.spin-plus {
-		top: 50%;
-		margin-top: -15px;
-		right: 10px;
-		position: absolute;
-		background: 0;
-		border: 0;
-		padding: 10px;
-		outline: 0;
-	}
 }
 .top-menu {
 	position: absolute;
@@ -38,6 +29,7 @@
 			font-size: 0.75em;
 			display: block;
 			color: #000;
+			letter-spacing: 2px;
 			&:hover,
 			&:focus {
 				color: black;
@@ -65,32 +57,7 @@ h1 {
 		@include transition(all 0.2s ease);
 	}
 }
-.spin-plus {
-    display: block;
-    &.animate .cross {
-       @include transform(rotate(180deg));   
-    }
-    &.animate .cross:after {
-       @include transform(rotate(180deg)); 
-    }
-    .cross {
-        height: 2px;
-        width: 10px;
-        margin: 0;
-        background: black;
-        @include transition(all 0.8s ease);
-        display: block;
-        &:after {
-        	@include transition(all 0.4s ease);
-			height: 2px;
-			width: 10px;
-			content: " ";
-			display: block;
-	        @include transform(rotate(90deg));       
-			background: black;
-        }
-    }
-}
+
 #scroll-arrow {
 	opacity: 0;
 }

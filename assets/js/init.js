@@ -5,6 +5,7 @@ $(function ($) {
 
 	// Picture element HTML5 shiv
 	document.createElement( "picture" );
+	console.log("%c+","font-size: 1px; padding: 100px 200px; line-height: 360px; background: url(https://38.media.tumblr.com/91a6ad612b38026bff6d7df50af3dac9/tumblr_nbwphdEPUe1tpblejo2_250.gif); background-size: 245px 234px; color: transparent;");
 
 	var windowHeight = $(window).height();
 	var baseSpace = windowHeight / 10;
@@ -88,12 +89,12 @@ $(function ($) {
 
     enquire.register("screen and (min-width: 767px)", {
 	    match : function() {
-	    	$("header").addClass('shown-sub');
+	    	$("header, footer").addClass('shown-sub');
 	    	$(".about-text").addClass('center');
 	    },
 	    unmatch : function() {
 	    	$(".spin-plus").removeClass('animate');
-	    	$("header").removeClass('shown-sub');
+	    	$("header, footer").removeClass('shown-sub');
 	    	$(".about-text").removeClass('center');
 	    },
 	});
