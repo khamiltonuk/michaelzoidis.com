@@ -19,11 +19,17 @@ Personal portfolio of Michael Zoidis
 * watch for changes to js files in app/ and restart the node server
 * watch for sass changes and recompile css
 
+##Deploying
+0. navigate to var/www/michaelzoidis.com on the server
+1. pull in you most resent changes using git,
+2. run grunt compile
+3. forever restartall
+4  sudo service nginx restart
+
 ##Todo
 * Introduce grunt tasks and minify js with uglifyjs
 * Introduce requirejs
 * Introduce feature branches
-* Introduce responsive images with srcset
 
 ##Wireframes
 Available [here](https://www.sendspace.com/file/5v0gmf)
