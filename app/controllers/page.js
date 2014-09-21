@@ -21,7 +21,9 @@ module.exports.render = function (req, res) {
       res.status(404);
       res.render('pages/404', { name: 'Page not found' });
     } else {
-      res.send(html);
+      res.send(html, {
+        myVar: 'My Data'
+      });
     }
   });
 };

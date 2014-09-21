@@ -20,11 +20,10 @@ Personal portfolio of Michael Zoidis
 * watch for sass changes and recompile css
 
 ##Deploying
-0. navigate to /var/www/michaelzoidis.com on the server
-1. pull in you most resent changes using git,
-2. run grunt compile
-3. forever restartall
-4  sudo service nginx restart
+0. navigate to /var/www/michaelzoidis.com on the server and pull in you most resent changes using git,
+1. run grunt compile
+2. forever restartall
+3. sudo service nginx restart
 
 ##Todo
 * Introduce grunt tasks and minify js with uglifyjs
