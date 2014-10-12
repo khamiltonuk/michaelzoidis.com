@@ -6,5 +6,20 @@ $fa-version:          "4.0.3" !default;
 $fa-css-prefix:       fa !default;
 $fa-inverse:          #000 !default;
 
-$base-colour: 		#6f79fe;
-$offwhite-colour:	#f8f5f5;
+// Black
+$black: 			  #282828;
+//white 
+$white:				  #ffffff;
+
+// Purple
+$base-colour: 		  #6f79fe;
+
+//Cream colour
+$offwhite-colour:	  rgb(248,245,245); // cream colour
+$offwhite-colour_95:  rgba(248,245,245, 0.95);
+$offwhite-colour_75:  rgba(248,245,245, 0.75);
+$offwhite-colour_50:  rgba(248,245,245, 0.5);
+
+//Yellow
+$sunrise-colour:      rgb(254,224,111);
+$sunrise-colour_95:   rgba(254,224,111,0.95);

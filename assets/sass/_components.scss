@@ -1,3 +1,11 @@
+
+a:hover, a:active { outline: none; }
+a, a:active, a:visited { color:$base-colour; text-decoration: none;}
+a:hover { color:$base-colour; }
+
+.black-link {
+  color:$black; 
+}
 /*******************
 Hidden elements
 **********************/
@@ -13,7 +21,32 @@ Hidden elements
   overflow:hidden;
   white-space: nowrap;
 }
+/*******************
+Spacing
+**********************/
+.mbxs {
+  margin-bottom: 5px;
+}
+.mbs {
+  margin-bottom: 10px;
+}
+.mbm {
+  margin-bottom: 15px;
+}
+.mlm {
+  margin-bottom: 20px;
+}
 
+/*******************
+Centering
+**********************/
+.unknown-centering {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+
+}
 /*******************
 layout
 **********************/
@@ -22,6 +55,9 @@ layout
 }
 .absolute{
   position: absolute
+}
+.relative-parent {
+  position: relative;
 }
 .center {
   @include transform(translate(-50%, -50%));
@@ -171,6 +207,13 @@ Light box overlay
   top: 0;
   left: 0;
   height: 100%;
+}
+
+.primary-overlay {
+  background: $offwhite-colour_95 none;
+}
+
+.secondary-overlay{
   background: url(../images/overlay-transparent-background.png);
-  background: rgba(254,224,111,0.95) none;
+  background: $sunrise-colour_95 none;
 }

@@ -8,7 +8,6 @@
 
 h1 { 
   font-size: 0.75em;
-  text-transform: uppercase; 
 }
 /* maxvoltar.com/archive/-webkit-font-smoothing */
 html { -webkit-font-smoothing: antialiased;}
@@ -39,6 +38,7 @@ h1,
 h2,
 h3 {
   letter-spacing: 1px;
+  color: $black;
 }
 /*******************
 THEME
@@ -52,7 +52,7 @@ main {
   position: relative;
   min-height: 370px;
   h2 {
-    color: #282828;
+    color: $black;
     font-size: 2.250em;
     max-width: 400px;
     margin-left: auto;
@@ -63,17 +63,21 @@ main {
     }
   }
 }
-
+.purple-heading {
+  color: $base-colour;
+  font-size: 2em;
+  letter-spacing: 0px;
+}
 article {
   margin-bottom: 60px;
-  background: #fff;
+  background: $white;
   padding-bottom: 60px;
   img {
     width: 100%; 
   }
   h1 {
     font-size: 2em;
-  }
+  } 
   h2 {
     font-size: 1em;
   }
@@ -111,8 +115,8 @@ article {
 }
 .close:hover,
 .close:focus{
-  color: #000;
-  border-bottom: 1px solid black;
+  color: $black;
+  border-bottom: 1px solid $black;
 }
 .mikes-head {
   position: static;
