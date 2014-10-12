@@ -11,6 +11,11 @@ footer {
 	padding: 30px 10px;
 	overflow: hidden;
 }
+header {
+	h1 {
+		text-transform: uppercase;
+	}
+}
 .top-menu {
 	position: absolute;
 	top: 0;
@@ -19,6 +24,9 @@ footer {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	h1 {
+		text-transform: uppercase;
+	}
 	li {
 		float: left;
     &:hover {
@@ -40,7 +48,6 @@ footer {
 
 h1 {
 	opacity: 1;
-	text-transform: uppercase;
 	letter-spacing: 2px;
 	@include transition(all 4s ease);
 	a,
