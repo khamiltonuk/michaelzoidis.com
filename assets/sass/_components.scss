@@ -130,22 +130,19 @@ layout
 Strikethrough effect
 **********************/
 .strikethrough {
-  position: relative;
-}
-
-.strikethrough:before {
-  content: '';
-  position: absolute;
-  top: .5em;
-  background: $base-colour;
+  top:50%;
+  margin-top:-1px;
   height: 2px;
+  display: block;
+  position: absolute;
+  background: $base-colour;
   width: 100%;
-  max-width: 0;
-  transition: max-width ease .5s;
 }
 
-.strikethrough__parent:hover .strikethrough:before {
-  max-width: 100%;
+.strikethrough__parent {
+  position: relative;
+  overflow: hidden;
+  display: block;
 }
 /*******************
 Spin plus turns to minus

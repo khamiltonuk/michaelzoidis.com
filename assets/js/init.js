@@ -4,8 +4,8 @@ $(function ($) {
 	}
 
 	// Picture element HTML5 shiv
-	document.createElement( "picture" );
-	console.log("%c+","font-size: 1px; padding: 100px 200px; line-height: 360px; background: url(https://38.media.tumblr.com/91a6ad612b38026bff6d7df50af3dac9/tumblr_nbwphdEPUe1tpblejo2_250.gif); background-size: 245px 234px; color: transparent;");
+	//document.createElement( "picture" );
+	//console.log("%c+","font-size: 1px; padding: 100px 200px; line-height: 360px; background: url(https://38.media.tumblr.com/91a6ad612b38026bff6d7df50af3dac9/tumblr_nbwphdEPUe1tpblejo2_250.gif); background-size: 245px 234px; color: transparent;");
 
 	var windowHeight = $(window).height();
 	var baseSpace = windowHeight / 10;
@@ -45,12 +45,43 @@ $(function ($) {
 		disfromtop > 250 ? $('#go-top').addClass('is-shown') : $('#go-top').removeClass('is-shown') ;
 		stickyElement();
 		// space out links
-		spaceOutLinks();
-
-
-		
+		spaceOutLinks();		
 	});
 
+	
+
+	$.fn.strikeThrough = function (options) {
+		var strike = {
+			options: $.extend({
+				strikethroughParent	: $(this),
+				duration : 400
+			}, options ),
+			init : function () {
+				this.options.strikethroughParent.each(function(){
+					$(this).append("<span class='strikethrough' style='left: -100%'></span>");
+					var $span = $(this).find('span');
+
+					$(this).hover(function () {
+					    $span.stop(true, true).animate({
+					        left: 0
+					    });
+					}, function () {
+					    $span.stop(true, true).animate({
+					        left: "100%"
+					    }, function () {
+					        $span.css({
+					            left: "-100%"
+					        });
+					    });
+});
+				});
+			},
+		}
+		return strike.init();
+	} 
+
+	$('.strikethrough__parent').strikeThrough();
+	//
 
 	$('#go-top').click(function(e){
 		e.preventDefault();
@@ -98,4 +129,4 @@ $(function ($) {
 	    	$(".about-text").removeClass('center');
 	    },
 	});
-});
+}(jQuery));
